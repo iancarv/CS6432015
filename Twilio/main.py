@@ -24,9 +24,9 @@ def receive():
 def send():
     client = TwilioRestClient(settings.ACCOUNT_SID, settings.AUTH_TOKEN)
     txt = 'Hello from IAN CARVALHO'
-    message = client.messages.create(to=settings.SEND_NUMBER, from_='+16466933151',
-                                     body=txt)
-    return 'Message sent to ' + number
+    message = client.messages.create(to=settings.SEND_NUMBER, from_='+17327092519',
+                                         body=txt)
+    return 'Message sent to ' + settings.SEND_NUMBER
 
 if __name__ == '__main__':
     app.run(debug=True)
